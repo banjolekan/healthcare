@@ -194,6 +194,7 @@ const styles = StyleSheet.create({
     color: '#FD0000',
     marginTop: 10,
   },
+
 });
 
 export default billing1Screen;

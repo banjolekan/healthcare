@@ -30,6 +30,14 @@ import billingScreen from './Screens/billingScreen';
 import billing1Screen from './Screens/billing1Screen';
 import invoiceScreen from './Screens/invoiceScreen';
 
+import ConsultationsScreen from './Screens/past consultation/consultationScreen';
+import consultScreen from './Screens/past consultation/consultScreen';
+import OnlineappointScreen from './Screens/past consultation/OnlineappointScreen';
+import VideocallScreen from './Screens/past consultation/VideocallScreen';
+import LivechatScreen from './Screens/past consultation/LivechatScreen';
+import Livechat1Screen from './Screens/past consultation/Livechat1Screen';
+import ReminderScreen from './Screens/past consultation/ReminderScreen';
+
 
 const Stack = createNativeStackNavigator();
 
@@ -39,7 +47,7 @@ return(
   <NavigationContainer>
     <Stack.Navigator>
     <Stack.Screen name="basic"
-     component={invoiceScreen} 
+     component={ReminderScreen} 
      options={{headerShown: false}} />
        </Stack.Navigator>
        </NavigationContainer>
