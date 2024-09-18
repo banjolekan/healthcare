@@ -18,65 +18,126 @@ const Livechat1Screen = ({ onBackPress }) => {
       </View>
 
       <ScrollView style={styles.conversationContainer}>
-        {/* Doctor's message */}
+      <View style={styles.card}>
         <View style={styles.doctorMessage}>
-          <Text style={styles.doctorText}>
-            Get her something warm to drink which is easy to eat like vegetable soup. 
-            I’m gonna prescribe a drug. Are there any pharmacies nearby?
-          </Text>
+        <Image source={require('./../../assets/icon5.png')} />
+        <Text style={{fontSize: 15, fontWeight: 700, width: 231, height:16}}>      Who take it?</Text>
         </View>
-
-        {/* User's response */}
-        <View style={styles.userMessage}>
-          <Text style={styles.userText}>
-            Yes. Please send me the prescription. I will take it for her.
-          </Text>
+       
+        <View style={styles.doctorMessage}>
+   <TouchableOpacity>
+        <Image source={require('./../../assets/bg2.png')} />
+        </TouchableOpacity>
+        <TouchableOpacity>
+        <Image source={require('./../../assets/bg1.png')} />
+        </TouchableOpacity>
+        <TouchableOpacity>
+        <Image source={require('./../../assets/bg3.png')} />
+        </TouchableOpacity>
         </View>
+        </View>
+       
+        <View style={styles.card}>
+        <View style={styles.doctorMessage}>
+ <Image source={require('./../../assets/med1.png')} />
 
+        <Text style={{fontSize: 15, fontWeight: 700, width: 231, height:16}}>      Medicine Details</Text>
+        </View>
+        <Text style={styles.label1}>Medicine Name</Text>
+          <View style={styles.infoBox1}>
+            <Text style={styles.infoText1}>Acyclovir</Text>
+          </View>
+          <Text style={styles.label1}>Product Name</Text>
+          <View style={styles.infoBox1}>
+            <Text style={styles.infoText1}>Acyclovir 800mg</Text>
+          </View>
+          <Text style={styles.label1}>Producer</Text>
+          <View style={styles.infoBox1}>
+            <Text style={styles.infoText1}>ZyGenerics</Text>
+            
+          </View>
+          
         {/* Doctor's follow-up */}
         <View style={styles.doctorMessage}>
-          <Text style={styles.doctorText}>
-            Follow up prescription and she will be fine.
-          </Text>
+          <Text>Dose</Text>
+        <Image source={require('./../../assets/minus.png')} /> 
+        <Text>1</Text>
+        <Image source={require('./../../assets/plus.png')} /> 
         </View>
-
-        {/* Prescription section */}
-        <View style={styles.prescriptionContainer}>
-          <Text style={styles.prescriptionTitle}>Acyclovir</Text>
-          <Text style={styles.prescriptionDetails}>
-            800 mg Acyclovir four times daily, with or without food. Treatment should continue for five days.
-          </Text>
-          <TouchableOpacity >
-      <Image
-        source={require('./../../assets/take.png')} style={{width: 263,height: 36,   marginTop: 20,justifyContent: 'center',resizeMode: 'contain',left:25}} 
+        
+       
+        <View style={styles.doctorMessage}>
+        <TouchableOpacity>
+        <Image source={require('./../../assets/Option.png')} />
+        </TouchableOpacity>
+        <TouchableOpacity>
+        <Image source={require('./../../assets/Option1.png')} />
+        </TouchableOpacity>
+        <TouchableOpacity>
+        <Image source={require('./../../assets/Option2.png')} />
+        </TouchableOpacity>
+        <TouchableOpacity>
+        <Image source={require('./../../assets/Option3.png')} />
+        </TouchableOpacity>
       
-      />
-    </TouchableOpacity>
         </View>
-
-        {/* User's confirmation */}
-        <View style={styles.userMessage}>
-          <Text style={styles.userText}>I got it. Thanks so much!</Text>
         </View>
+        <View style={styles.card}>
+        <View style={styles.doctorMessage}>
+ <Image source={require('./../../assets/med1.png')} />
 
-        {/* Consult ended */}
-        <View style={styles.endMessage}>
-          <Text style={styles.endText}>Consult ended</Text>
-          <Text style={styles.endTime}>07:35 PM Dec, 12 2019</Text>
+        <Text style={{fontSize: 15, fontWeight: 700, width: 231, height:16}}>      Medicine Details</Text>
+        <Image source={require('./../../assets/Switch1.png')} />
         </View>
-      </ScrollView>
-
-    
-
+        <Text style={styles.label1}>Times</Text>
+          <View style={styles.infoBox1}>
+            <Text style={styles.infoText1}>Four a day</Text>
+          </View>
+          <Text style={styles.label1}>How long?</Text>
+          <View style={styles.infoBox1}>
+            <Text style={styles.infoText1}>5 days</Text>
+          </View>
+          <Text style={styles.label1}>Start from</Text>
+  
+          <View style={styles.infoBox1}>
+            <Text style={styles.infoText1}>Today</Text>
+          </View>
+          <Text style={styles.label1}>Reminder</Text>
+  
+  <View style={styles.infoBox1}>
+    <Text style={styles.infoText1}>08:00 AM</Text>
+  </View>
+  
+  <View style={styles.infoBox1}>
+    <Text style={styles.infoText1}>11:00 AM</Text>
+  </View>
+  
+  <View style={styles.infoBox1}>
+    <Text style={styles.infoText1}>03:00 PM</Text>
+  </View>
+  
+  <View style={styles.infoBox2}>
+    <Text style={styles.infoText1}>09:00 PM</Text>
+  </View>
+  <Text style={styles.label1}>Snooze</Text>
+  
+  <View style={styles.infoBox2}>
+    <Text style={styles.infoText1}>Every 2 mins</Text>
+    <Image source={require('./../../assets/down.png')} />
+  </View>
+  </View>
+     
       <View style={styles.contactSection}>
         <TouchableOpacity >
       <Image
-        source={require('./../../assets/new.png')} 
-        style={styles.image2}
-      />
+        source={require('./../../assets/cancel.png')}/>
+    </TouchableOpacity>
+        <TouchableOpacity >
+      <Image
+        source={require('./../../assets/ok.png')} />
     </TouchableOpacity>
         </View>
-
+        </ScrollView>
       
     </View>
   );
@@ -95,30 +156,29 @@ const styles = StyleSheet.create({
     padding: 16,
   },
   doctorMessage: {
-    backgroundColor: '#007bff',
-    padding: 12,
-    borderRadius: 8,
-    marginBottom: 10,
-    alignSelf: 'flex-start',
-  },
-  doctorText: {
-    color: '#fff',
-  },
-  userMessage: {
-    backgroundColor: '#e5e5ea',
-    padding: 12,
-    borderRadius: 8,
-    marginBottom: 10,
-    alignSelf: 'flex-end',
-  },
-  actions: {
+    backgroundColor: 'white',
+    padding: 15, 
     flexDirection: 'row',
-    justifyContent: 'space-between',
     alignItems: 'center',
+    borderRadius: 20,
+    borderColor: 'black',
+    justifyContent:'space-between',
+    paddingHorizontal: 5,
   },
-  userText: {
-    color: '#000',
+
+  contactSection:{
+    backgroundColor: 'white',
+    padding: 15, 
+    flexDirection: 'row',
+    alignItems: 'center',
+    borderRadius: 20,
+    borderColor: 'black',
+    justifyContent:'space-between',
+    
+
+ 
   },
+
   prescriptionContainer: {
     backgroundColor: '#fff',
     padding: 16,
@@ -188,6 +248,47 @@ const styles = StyleSheet.create({
     marginBottom: 40,
     left: 15
   }, 
+  label1: {
+    fontSize: 13,
+    fontWeight: '600',
+    marginTop: 10,
+    paddingLeft: 20,
+  },
+  infoBox1: {
+    backgroundColor: 'white',
+    borderRadius: 10,
+    borderColor: '#ccc',
+    borderWidth: 1,
+    padding: 10,
+    marginVertical: 5,
+  },
+  infoText1: {
+    fontSize: 15,
+    fontWeight: '700',
+  },
+  infoBox2: {
+    backgroundColor: 'white',
+    borderRadius: 10,
+    borderColor: '#ccc',
+    borderWidth: 1,
+    padding: 10,
+    marginVertical: 5,
+    padding: 15, 
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent:'space-between',
+    paddingHorizontal: 5,
+  },
+
+card: {
+ 
+  backgroundColor: '#fff',
+  borderRadius: 10,
+  padding: 10,
+  marginVertical: 10,
+  
+  
+},
 });
 
 export default Livechat1Screen;
